@@ -1,0 +1,24 @@
+.grid {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  row-gap: 3rem;
+  padding: 20px 20px 40px 20px;
+  color: #edf2ff;
+  font-size: 18px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 24px;
+}
+.btn {
+  justify-self: end;
+}
+.btn Button {
+  margin: 0 20px 0 0;
+}
+
+.text {
+  grid-column: 1/-1;
+}

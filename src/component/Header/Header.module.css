@@ -1,0 +1,39 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.textHeader {
+  color: #edf2ff;
+  padding: 2rem;
+  padding-bottom: 5rem;
+}
+.container h1 {
+  font-size: 2rem;
+}
+.container p {
+  font-size: 1rem;
+  margin: 2rem 0 1.5rem 0;
+}
+
+.container Button {
+  background-color: #339af0;
+  padding: 0.8rem;
+  color: #edf2ff;
+}
+
+.container Button:hover,
+Button:active {
+  color: #1f1f1f;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  transform: translateY(50%);
+}
+
+.form Button:hover,
+Button:active {
+  color: #edf2ff;
+  background-color: #339af0;
+}

@@ -1,0 +1,13 @@
+.item {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 2rem 0 0;
+}
+.item span {
+  margin-left: 1rem;
+}
+.border {
+  border: 2px solid #edf2ff;
+  padding: 0.7rem;
+  border-radius: 20px;
+}
