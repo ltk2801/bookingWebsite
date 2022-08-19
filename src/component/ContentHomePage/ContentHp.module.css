@@ -1,0 +1,31 @@
+.container::before {
+  display: block;
+  content: "";
+  margin-top: 5rem;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* .container h1 {
+  margin: 2rem 0 2rem 1rem;
+} */
+
+.citis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+}
+
+.types {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 40px;
+}
+
+.hotels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 40px;
+}

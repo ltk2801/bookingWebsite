@@ -1,0 +1,10 @@
+.container {
+  color: #1484ec;
+  font-size: 18px;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 20px;
+  margin-bottom: 6rem;
+}

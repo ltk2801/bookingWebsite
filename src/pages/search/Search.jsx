@@ -1,7 +1,8 @@
+import Navbar from "../../component/Navbar/Navbar";
 const Search = () => {
   return (
     <div>
-      <h1>Search Page</h1>
+      <Navbar />
     </div>
   );
 };

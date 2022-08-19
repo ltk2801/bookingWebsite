@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "../UI/Card";
 import Button from "../UI/Button";
 import datas from "../../data/navBar.json";
@@ -11,6 +11,9 @@ export default function Navbar() {
       <div className={styles.grid}>
         <div className={styles.title}>Booking Website</div>
         <div className={styles.btn}>
+          <Button>
+            <a href="/">Home</a>
+          </Button>
           <Button>Register</Button>
           <Button>Login</Button>
         </div>

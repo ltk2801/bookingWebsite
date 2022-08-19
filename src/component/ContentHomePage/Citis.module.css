@@ -1,0 +1,20 @@
+.city {
+  font-size: 1.3rem;
+  color: #edf2ff;
+  position: relative;
+}
+
+.city img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  filter: brightness(90%);
+}
+
+.city div {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}

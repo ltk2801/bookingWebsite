@@ -1,0 +1,37 @@
+.hotel {
+  font-size: 1.3rem;
+  line-height: 2;
+}
+
+.hotel img {
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.01);
+  filter: brightness(90%);
+}
+
+.hotel a:link,
+a:visited {
+  font-size: 1.4rem;
+  color: #1484ec;
+}
+
+.hotel a:hover,
+a:active {
+  color: #6db8ff;
+  cursor: grab;
+  font-weight: bold;
+}
+
+.hotel p {
+  color: #636568;
+}
+
+.point {
+  background-color: #023e8a;
+  padding: 6px;
+  color: white;
+  margin-right: 1rem;
+}

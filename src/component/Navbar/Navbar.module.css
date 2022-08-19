@@ -18,6 +18,17 @@
 .btn Button {
   margin: 0 20px 0 0;
 }
+.btn Button:hover,
+Button:active {
+  color: #023e8a;
+  font-weight: bold;
+}
+
+.btn a:link,
+a:visited {
+  color: #023e8a;
+  text-decoration: none;
+}
 
 .text {
   grid-column: 1/-1;
