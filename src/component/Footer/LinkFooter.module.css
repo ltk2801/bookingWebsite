@@ -5,6 +5,6 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  column-gap: 20px;
+  column-gap: 30px;
   margin-bottom: 6rem;
 }

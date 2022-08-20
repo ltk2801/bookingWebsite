@@ -1,0 +1,89 @@
+.container {
+  display: grid;
+  grid-template-columns: 25% 45% auto;
+  column-gap: 20px;
+  font-size: 16px;
+  border: 2px solid #339af0;
+  padding: 0.8rem;
+  background-color: white;
+  border-radius: 4px;
+  margin-bottom: 3rem;
+}
+.text h3 {
+  margin-bottom: 10px;
+  color: #279cfc;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.tag {
+  background-color: #217932;
+  color: white;
+  font-weight: bold;
+  width: 150px;
+  padding: 4px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+p,
+span {
+  margin: 10px 0;
+}
+.cancel h4 {
+  color: #247c35;
+  margin: 10px 0;
+}
+.cancel span {
+  color: #2f9e44;
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.amount span {
+  margin: 0;
+}
+.amount {
+  display: grid;
+  align-content: space-between;
+}
+
+.pointFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pointFlex span {
+  background-color: #023e8a;
+  padding: 4px;
+  color: white;
+}
+
+/* CSS cho phần amount */
+.amountFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.amountFlex span {
+  margin: 0.5rem 0;
+  color: #868e96;
+}
+
+.amountFlex Button {
+  width: 100%;
+  height: 50px;
+  background-color: #279cfc;
+  color: white;
+  outline: none;
+}
+
+.amountFlex Button:hover,
+Button:active {
+  background-color: #279cfc;
+  color: white;
+  font-weight: bold;
+}

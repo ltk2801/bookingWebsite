@@ -4,6 +4,8 @@ import Card from "../UI/Card";
 import FormHeader from "./FormHeader";
 import styles from "./Header.module.css";
 
+// Header gồm các thẻ và 1 componen FormHeader
+
 export default function Header() {
   return (
     <Card>

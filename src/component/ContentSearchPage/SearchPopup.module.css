@@ -1,0 +1,44 @@
+.container {
+  background-color: #ffb703;
+  padding: 1rem;
+  border-radius: 20px;
+}
+.container h3 {
+  margin-bottom: 1rem;
+  color: #264653;
+  font-size: 1.8rem;
+}
+.container input {
+  width: 100%;
+  height: 3rem;
+  margin: 1rem 0;
+  border-radius: 2px;
+  font-size: 18px;
+  padding-left: 0.5rem;
+}
+
+.container li {
+  padding: 4px;
+  color: #6e747a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Button {
+  margin-top: 1rem;
+  height: 50px;
+  width: 100%;
+} */
+
+.btn {
+  margin: 1rem 0 0.5rem;
+  height: 50px;
+  width: 100%;
+  background-color: #339af0;
+  padding: 0.8rem;
+  color: #edf2ff;
+}
+.btn:hover {
+  color: black;
+}

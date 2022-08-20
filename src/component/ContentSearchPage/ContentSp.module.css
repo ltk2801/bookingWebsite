@@ -1,0 +1,9 @@
+.container {
+  width: 80%;
+  margin: 4rem auto;
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  column-gap: 5rem;
+  align-items: start;
+}

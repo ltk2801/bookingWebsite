@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import Button from "../UI/Button";
 import styles from "./FormHeader.module.css";
+import { DateRange } from "react-date-range";
 
 export default function () {
+  // Phần nâng cao
+  const [enterdDate, setEnterdDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: null,
+      key: "selection",
+    },
+  ]);
+
   const [enterdGoing, setEnterdGoing] = useState("Where are you going?");
   const [enterdCalendar, setEnterdCalendar] = useState(
     "08/18/2022 to 08/20/2022"
@@ -36,43 +46,54 @@ export default function () {
   };
 
   return (
-    <form onSubmit={searchHandler} className={styles.formHeader}>
-      <div>
-        <label htmlFor="going">
-          <i className="fa fa-bed"></i>
-        </label>
-        <input
-          type="text"
-          id="going"
-          value={enterdGoing}
-          onChange={goingChangeHandler}
-        />
-      </div>
-      <div>
-        <label htmlFor="calendar">
-          <i className="fa fa-calendar"></i>
-        </label>
-        <input
-          type="text"
-          id="calendar"
-          value={enterdCalendar}
-          onChange={calendarChangeHandler}
-        />
-      </div>
-      <div>
-        <label htmlFor="famale">
-          <i className="fa fa-female"></i>
-        </label>
-        <input
-          type="text"
-          id="famale"
-          value={enterdFamale}
-          onChange={famaleChangeHandler}
-        />
-      </div>
-      <div>
-        <Button type="submit">Search</Button>
-      </div>
-    </form>
+    <div>
+      {/* <DateRange
+        editableDateInputs={false}
+        onChange={(item) => setEnterdDate([item.selection])}
+        moveRangeOnFirstSelection={false}
+        ranges={enterdDate}
+      /> */}
+      <form onSubmit={searchHandler} className={styles.formHeader}>
+        <div>
+          <label htmlFor="going">
+            <i className="fa fa-bed"></i>
+          </label>
+          <input
+            type="text"
+            id="going"
+            value={enterdGoing}
+            onChange={goingChangeHandler}
+          />
+        </div>
+        <div>
+          <label htmlFor="calendar">
+            <i className="fa fa-calendar"></i>
+          </label>
+          <input
+            type="text"
+            id="calendar"
+            value={enterdCalendar}
+            onChange={calendarChangeHandler}
+            onClick={() => {
+              console.log("hi");
+            }}
+          />
+        </div>
+        <div>
+          <label htmlFor="famale">
+            <i className="fa fa-female"></i>
+          </label>
+          <input
+            type="text"
+            id="famale"
+            value={enterdFamale}
+            onChange={famaleChangeHandler}
+          />
+        </div>
+        <div>
+          <Button type="submit">Search</Button>
+        </div>
+      </form>
+    </div>
   );
 }

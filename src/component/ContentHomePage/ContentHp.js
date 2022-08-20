@@ -7,6 +7,8 @@ import datasHotel from "../../data/hotel_list.json";
 import Types from "./Types";
 import Hotels from "./Hotels";
 
+// Nội dung chính của HomePage gồm 3 component Citis và Types và Hotels
+
 export default function ContentHp() {
   return (
     <div className={styles.container}>

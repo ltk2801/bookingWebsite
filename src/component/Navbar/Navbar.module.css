@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 60% 40%;
   row-gap: 3rem;
   padding: 20px 20px 40px 20px;
   color: #edf2ff;
