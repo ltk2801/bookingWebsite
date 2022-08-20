@@ -27,8 +27,8 @@ Button:active {
 }
 
 .form {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   transform: translateY(50%);
 }
 

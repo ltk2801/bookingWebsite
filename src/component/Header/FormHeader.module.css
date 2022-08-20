@@ -27,3 +27,9 @@
 .formHeader label i {
   font-size: 1.4rem;
 }
+
+.calender {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

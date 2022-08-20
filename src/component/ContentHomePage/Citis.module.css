@@ -2,6 +2,7 @@
   font-size: 1.3rem;
   color: #edf2ff;
   position: relative;
+  z-index: -1;
 }
 
 .city img {

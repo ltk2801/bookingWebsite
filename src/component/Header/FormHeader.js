@@ -1,37 +1,57 @@
 import React, { useState } from "react";
 import Button from "../UI/Button";
 import styles from "./FormHeader.module.css";
+import "react-date-range/dist/styles.css"; // main style file
+import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRange } from "react-date-range";
 
 export default function () {
   // Phần nâng cao
   const [enterdDate, setEnterdDate] = useState([
     {
+      // Mặc định cở bản là thuê 1 ngày
       startDate: new Date(),
-      endDate: null,
+      endDate: new Date(),
       key: "selection",
     },
   ]);
 
+  // Chuyển đổi date thành ngày tháng năm
+  const monthstart = enterdDate[0].startDate.toLocaleString("en-US", {
+    month: "2-digit",
+  });
+  const daystart = enterdDate[0].startDate.toLocaleString("en-US", {
+    day: "2-digit",
+  });
+  const monthend = enterdDate[0].endDate.toLocaleString("en-US", {
+    month: "2-digit",
+  });
+  const dayend = enterdDate[0].endDate.toLocaleString("en-US", {
+    day: "2-digit",
+  });
+  const year = enterdDate[0].startDate.getFullYear();
+
+  // Sử dụng useState để lưu value
   const [enterdGoing, setEnterdGoing] = useState("Where are you going?");
-  const [enterdCalendar, setEnterdCalendar] = useState(
-    "08/18/2022 to 08/20/2022"
-  );
   const [enterdFamale, setEnterdFamale] = useState(
     "1 adult · 0 children · 1 room "
   );
+
+  //  Set chế độ on of cho calendar
+  const [onCalendar, setOnCalendar] = useState(false);
+
+  // Hàm khi ấn vào input calender
+  const calendarChangeHandler = (event) => {
+    setOnCalendar(!onCalendar);
+    event.preventDefault();
+  };
 
   // Lấy giá trị người dùng nhập vào
   const goingChangeHandler = (event) => {
     setEnterdGoing(event.target.value);
   };
 
-  // Lấy giá trị khi người dùng nhập Age
-  const calendarChangeHandler = (event) => {
-    setEnterdCalendar(event.target.value);
-  };
-
-  // Đặt lại thằng error là null, không có thì sẽ không hiện thị ErorModal
+  // Lấy giá trị nhập Famale
   const famaleChangeHandler = (event) => {
     setEnterdFamale(event.target.value);
   };
@@ -40,19 +60,12 @@ export default function () {
   const searchHandler = (event) => {
     event.preventDefault();
     setEnterdGoing("");
-    setEnterdCalendar("");
     setEnterdFamale("");
     location.replace("http://localhost:3000/Search");
   };
 
   return (
     <div>
-      {/* <DateRange
-        editableDateInputs={false}
-        onChange={(item) => setEnterdDate([item.selection])}
-        moveRangeOnFirstSelection={false}
-        ranges={enterdDate}
-      /> */}
       <form onSubmit={searchHandler} className={styles.formHeader}>
         <div>
           <label htmlFor="going">
@@ -72,11 +85,8 @@ export default function () {
           <input
             type="text"
             id="calendar"
-            value={enterdCalendar}
-            onChange={calendarChangeHandler}
-            onClick={() => {
-              console.log("hi");
-            }}
+            value={`${daystart}/${monthstart}/${year} to ${dayend}/${monthend}/${year} `}
+            onClick={calendarChangeHandler}
           />
         </div>
         <div>
@@ -94,6 +104,16 @@ export default function () {
           <Button type="submit">Search</Button>
         </div>
       </form>
+      {onCalendar && (
+        <div className={styles.calender}>
+          <DateRange
+            editableDateInputs={false}
+            onChange={(item) => setEnterdDate([item.selection])}
+            moveRangeOnFirstSelection={false}
+            ranges={enterdDate}
+          />
+        </div>
+      )}
     </div>
   );
 }
