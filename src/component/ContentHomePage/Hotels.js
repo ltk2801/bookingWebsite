@@ -4,7 +4,7 @@ import styles from "./Hotels.module.css";
 export default function Hotels(props) {
   return (
     <div className={styles.hotel}>
-      <img src={props.image_url} />
+      <img src={props.image_url} alt="img" />
       <div>
         <a href="/Detail">{props.name}</a>
         <p>{props.city}</p>

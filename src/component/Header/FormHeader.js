@@ -4,8 +4,11 @@ import styles from "./FormHeader.module.css";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRange } from "react-date-range";
+import { useNavigate } from "react-router-dom";
 
 export default function () {
+  // Sử dụng useNavigate để chuyển trang
+  let navigate = useNavigate();
   // Phần nâng cao
   const [enterdDate, setEnterdDate] = useState([
     {
@@ -61,7 +64,7 @@ export default function () {
     event.preventDefault();
     setEnterdGoing("");
     setEnterdFamale("");
-    location.replace("http://localhost:3000/Search");
+    navigate("../Search", { replace: true });
   };
 
   return (

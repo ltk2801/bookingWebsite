@@ -5,7 +5,7 @@ import styles from "./SearchList.module.css";
 export default function SearchList(props) {
   return (
     <div className={styles.container}>
-      <img src={props.url} />
+      <img src={props.url} alt="img" />
       <div className={styles.text}>
         <h3>{props.name}</h3>
         <span>{props.distance} from center</span>
